@@ -16,12 +16,17 @@ var storageRef = storage.ref();
 
 
 firebase.auth().onAuthStateChanged(function (user) {
-    if (!user) {
-        alert("Please login to continue.")
+    if (user) {
+        
         window.location.href = 'index.html';
-        console.log('no authentication')
+
+        
+        
     } else {
+       
         console.log('logged in');
+        
+        
     }
 });
 
